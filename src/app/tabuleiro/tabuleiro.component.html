@@ -1,0 +1,11 @@
+<h1> Current PLayer : {{player}}</h1>
+<button nbButton outline status="danger" (click)=novoJogo()> Iniciar novo Jogo</button>
+
+<h2 *ngIf="winner"> Jogador {{winner}} venceu o jogo! </h2>
+
+<main>
+    <app-quadrado *ngFor="let val of quadrados; 
+    let i =index" [value]="val" 
+    (click)="fazerJogada(i)" >
+         </app-quadrado>
+</main>
